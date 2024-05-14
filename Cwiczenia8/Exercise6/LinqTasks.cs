@@ -196,7 +196,9 @@ namespace Exercise6
         /// </summary>
         public static int Task3()
         {
-            int result = 0;
+            var syntaxMethod = Emps.Select(e => e.Salary).Max();
+            
+            int result = syntaxMethod;
             return result;
         }
 
@@ -205,7 +207,10 @@ namespace Exercise6
         /// </summary>
         public static IEnumerable<Emp> Task4()
         {
-            IEnumerable<Emp> result = null;
+            var syntaxMethod = 
+                Emps.Where(e => e.Salary.Equals(Emps.Select(e => e.Salary).Max()));
+            
+            IEnumerable<Emp> result = syntaxMethod;
             return result;
         }
 
